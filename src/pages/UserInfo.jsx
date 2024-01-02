@@ -1,8 +1,7 @@
  
  
-import { Container, Typography } from '@mui/material';
-import { DailyCaloriesForm } from 'components/DailyCaloriesForm/DailyCaloriesForm';
-import { Helmet } from 'react-helmet';
+import { Container } from '@mui/material';
+ 
 
 const UserInfo = () => {
  

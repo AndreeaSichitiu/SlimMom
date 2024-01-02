@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import {Typography} from '@mui/material';
 import Modal from '@mui/material/Modal';
-import PropTypes from 'prop-types';
+
 import { AiOutlineClose } from "react-icons/ai";
-import { Grid, TextField } from '@mui/material';
+
 import css from "./Modal.module.css"
 
 const style = {

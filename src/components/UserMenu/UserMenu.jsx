@@ -1,9 +1,9 @@
 import { useAuth } from 'hooks';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { logout } from 'redux/auth/operations';
 import css from './UserMenu.module.css';
 import { Link } from '@mui/material';
-import { RightSideBar } from 'components/RightSideBar/RightSideBar';
+ 
  
 // import { styled } from '@mui/material/styles';
  
