@@ -37,7 +37,7 @@ export const Navigation = () => {
 
   return (
     <nav className={css.nav}>
-      <NavLink className={css.link} to="/">
+      <NavLink className={css.link} to="/diary">
         <img className={css.logo} alt={''} src={takeLogo()}></img>
       </NavLink>
       {isLoggedIn && (

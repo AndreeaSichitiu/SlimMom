@@ -5,6 +5,7 @@ import {Typography} from '@mui/material';
 import Modal from '@mui/material/Modal';
 import { AiOutlineClose } from "react-icons/ai";
 import css from "./Modal.module.css"
+import { NavLink } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -17,48 +18,28 @@ const style = {
   borderRadius: '10px',
 };
 
+
+
 export const ModalCalculator = ({ isOpen, onClose }) => {
-  // const [contactName, setContactName] = React.useState(name);
-  // const [contactNumber, setContactNumber] = React.useState(number);
-  // const dispatch = useDispatch();
-  // const operation = useSelector(selectIsLoading);
-  // const contacts = useSelector(selectContacts);
-
-  // const handleEdit = async e => {
-  //   e.preventDefault();
-
-    // const EditName = contacts.some(
-    //   contact => contact.name.toLowerCase() === contactName.toLowerCase()
-    // );
-    // const EditNumber = contacts.some(
-    //   contact => contact.number === contactNumber
-    // );
-
-    // if (EditName && EditNumber) {
-    //   Notify.error(`${contactName} is already in contacts`);
-    //   return;
-    // }
-
-    // if (contactName === '' || contactNumber === '') {
-    //   Notify.warning('Fields cannot be empty!');
-    //   return;
-    // }
-
-  //   try {
-  //     await dispatch(
-  //       updateContact({
-  //         name: contactName,
-  //         number: contactNumber,
-  //         contactId: id,
-  //       })
-  //     ).unwrap();
-  //     Notify.success(`${name} contact was changed`);
-  //     onClose();
-  //   } catch (error) {
-  //     console.log(error);
-  //     Notify.warning('Ooops!..Something went wrong! Please try again later');
-  //   }
-  // };
+   
+  const calculateCalories = ({
+    height,
+    age,
+    currentWeight,
+    desiredWeight,
+  }) => {
+    if ([height, age, currentWeight, desiredWeight].includes(0)) {
+      return 0;
+    }
+    return Math.round(
+      10 * currentWeight +
+        6.25 * height -
+        5 * age -
+        161 -
+        10 * (currentWeight - desiredWeight)
+    );
+  };
+  
 
   return (
     <div>
@@ -88,7 +69,7 @@ export const ModalCalculator = ({ isOpen, onClose }) => {
         >
           Your recommended daily calorie intake is
         </Typography>
-
+        <Typography>{} kcal</Typography>
         <Button
               
             variant="contained"
@@ -105,9 +86,10 @@ export const ModalCalculator = ({ isOpen, onClose }) => {
               width: '210px',
               height: '43px',
               marginTop: '35px',
+              textDecoration: "none",
             }}
           >
-            Start losing weight
+            <NavLink className={css.buttonLink} to={'/register'}>Start losing weight</NavLink>
           </Button>
           
         </Box>
