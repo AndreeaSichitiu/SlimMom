@@ -1,11 +1,10 @@
  
  
 import { Container } from '@mui/material';
-import { DailyCaloriesForm } from 'components/DailyCaloriesForm/DailyCaloriesForm';
+// import { DailyCaloriesForm } from 'components/DailyCaloriesForm/DailyCaloriesForm';
 
 
 const UserInfo = () => {
- 
  
   return (
     <Container
@@ -13,9 +12,7 @@ const UserInfo = () => {
       maxWidth="md"
      >
       
-    </Container>
-     
-    
+    </Container>   
      
   );
 };

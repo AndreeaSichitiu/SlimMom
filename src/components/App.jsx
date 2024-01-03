@@ -16,7 +16,7 @@ import { ThemeProvider, createTheme } from '@mui/material';
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
-const UserInfo = lazy(() => import('../pages/UserInfo'));
+// const UserInfo = lazy(() => import('../pages/UserInfo'));
 const DiaryPage = lazy(() => import('../pages/Diary'));
 const CalculatorPage = lazy(() => import('../pages/Calculator'));
 
