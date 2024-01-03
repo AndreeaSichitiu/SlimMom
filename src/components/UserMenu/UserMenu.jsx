@@ -7,13 +7,10 @@ import { Link } from '@mui/material';
  
 // import { styled } from '@mui/material/styles';
  
- 
-
 export const UserMenu = () => {
   const { user } = useAuth();
   const dispatch = useDispatch();
  
-
   return (
     <div className={css.userWrapper}>
       <p className={css.user}>{user.name}</p>
@@ -23,13 +20,9 @@ export const UserMenu = () => {
       fontFamily="verdana"
       fontSize="14px"
       fontWeight="700"
-      color= "rgba(155, 159, 170, 1)"
-        
-
-      onClick={() => dispatch(logout())}
-     
-      >Exit</Link>
-       
+      color= "rgba(155, 159, 170, 1)" 
+      onClick={() => dispatch(logout())}     
+      >Exit</Link>       
     </div>
   );
 };

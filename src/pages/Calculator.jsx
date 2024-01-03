@@ -89,7 +89,7 @@ import { RightSideBar } from 'components/RightSideBar/RightSideBar';
         <Helmet>
           <title>Home</title>
         </Helmet>
-         <Box>
+         <Box display="flex" height="100vh">
         <DailyCaloriesForm />
         <RightSideBar/>
         </Box>

@@ -100,7 +100,7 @@ export const App = () => {
               path="/userinfo"
               element={
                 <PrivateRoute>
-                  <UserInfo />
+                  <CalculatorPage />
                 </PrivateRoute>
               }
             />
