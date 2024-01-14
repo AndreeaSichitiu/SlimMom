@@ -1,5 +1,4 @@
 import { Box } from '@mui/material';
-// import { useFormik } from 'formik';
 import { grey, orange } from '@mui/material/colors';
 import {
   FormControl,
@@ -67,8 +66,23 @@ const theme = createTheme({
   },
 });
 
-export function DailyCaloriesForm() {
+// const calculateBMI = (height, weight) => {
+//   // Perform the BMI calculation here
+//   // Formula: BMI = weight (kg) / (height (m) * height (m))
+//   const heightInMeters = height / 100; // convert height to meters
+//   const bmi = weight / (heightInMeters * heightInMeters);
+//   return bmi.toFixed(2);
+// };
 
+// const startValues = {
+//   height: '',
+//   age: '',
+//   currentWeight: '',
+//   desiredWeight: '',
+//   bloodType: '1',
+// };
+
+export function DailyCaloriesForm() {
   const [isShowModal, setIsShowModal] = useState(false);
   const toggleModal = () => setIsShowModal(prev => !prev);
 
@@ -191,7 +205,7 @@ export function DailyCaloriesForm() {
         </Box>
         <ButtonBox component="second">
           <Button
-             onClick={toggleModal}
+            onClick={toggleModal}
             variant="contained"
             type="submit"
             color="ochre"
@@ -213,10 +227,7 @@ export function DailyCaloriesForm() {
         </ButtonBox>
       </MainBox>
       {isShowModal && (
-        <ModalCalculator
-          onClose={toggleModal}
-          isOpen={isShowModal}  
-        />
+        <ModalCalculator onClose={toggleModal} isOpen={isShowModal} />
       )}
     </section>
   );
